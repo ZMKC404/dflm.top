@@ -1,179 +1,314 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFLM.TOP | Premium Domain</title>
+    <title>dflm.top | Premium Domain for Oriental Culture, Metaphysics & Wellness</title>
+    <meta name="description" content="dflm.top is a high-value domain asset for Oriental Culture, TCM, Metaphysics, and Holistic Wellness brands. Secure this 4-letter branding powerhouse today.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;600&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- SEO: JSON-LD for Domain Sale -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "dflm.top Domain Name",
+      "image": "https://images.unsplash.com/photo-1762860497981-cbc87873d222?fm=jpg&q=60&w=1200",
+      "description": "Premium 4-letter domain name for Oriental Culture, Metaphysics, and Health industries.",
+      "brand": {
+        "@type": "Brand",
+        "name": "dflm.top"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://dflm.top",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Premium Domain Brokerage"
+        }
+      }
+    }
+    </script>
+
     <style>
         :root {
-            --bg-color: #080808;
-            --text-main: #ffffff;
-            --text-dim: rgba(255, 255, 255, 0.5);
-            --gold: #c5a059;
-            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --ink-black: #1a1a1a;
+            --paper-white: #fcfaf2;
+            --cinnabar-red: #b22222;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #080808 100%);
+            font-family: 'Noto Serif SC', serif;
+            background-color: var(--paper-white);
+            color: var(--ink-black);
+            overflow-x: hidden;
         }
 
-        /* 顶部导航与语言切换 */
-        nav {
-            position: absolute;
-            top: 40px;
-            right: 40px;
-            z-index: 100;
+        .calligraphy {
+            font-family: 'Ma+Shan+Zheng', cursive;
         }
 
-        .lang-switch {
-            background: none;
-            border: 1px solid rgba(255,255,255,0.2);
-            color: var(--text-dim);
-            padding: 8px 16px;
-            cursor: pointer;
-            font-size: 12px;
-            letter-spacing: 2px;
-            transition: var(--transition);
+        .serif-en {
+            font-family: 'Playfair Display', serif;
         }
 
-        .lang-switch:hover {
-            border-color: #fff;
-            color: #fff;
+        .ink-gradient {
+            background: linear-gradient(to bottom, rgba(252, 250, 242, 0) 0%, rgba(252, 250, 242, 1) 100%);
         }
 
-        /* 主体内容 */
-        .content {
-            text-align: center;
+        .scroll-reveal {
             opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1.5s forwards ease-out;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
         }
 
-        @keyframes fadeIn {
-            to { opacity: 1; transform: translateY(0); }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .badge {
-            font-size: 11px;
-            letter-spacing: 5px;
-            color: var(--gold);
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-            display: block;
-        }
-
-        .domain-name {
-            font-size: clamp(3.5rem, 12vw, 8rem);
-            font-weight: 700;
-            letter-spacing: -3px;
-            margin-bottom: 0.5rem;
-            line-height: 1;
-            /* 渐变质感 */
-            background: linear-gradient(to bottom, #fff 30%, #666 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .price-tag {
-            font-size: 1.2rem;
-            font-weight: 200;
-            color: var(--text-dim);
-            letter-spacing: 4px;
-            margin-bottom: 4rem;
-        }
-
-        /* 按钮 */
-        .cta-button {
+        .seal {
+            border: 2px solid var(--cinnabar-red);
+            color: var(--cinnabar-red);
+            padding: 2px 4px;
             display: inline-block;
-            padding: 20px 50px;
-            background: transparent;
-            border: 1px solid #fff;
-            color: #fff;
-            text-decoration: none;
-            font-size: 13px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
+            font-weight: bold;
+            line-height: 1;
+            transform: rotate(-5deg);
         }
 
-        .cta-button:hover {
-            background: #fff;
-            color: #000;
-            transform: scale(1.05);
-        }
-
-        /* 底部信息 */
-        footer {
+        /* Responsive Canvas Adjustments */
+        #ink-canvas {
             position: absolute;
-            bottom: 40px;
+            top: 0;
+            left: 0;
             width: 100%;
-            text-align: center;
-            font-size: 10px;
-            color: rgba(255,255,255,0.2);
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
         }
-
-        /* 隐藏未选中的语言 */
-        [data-lang]:not(.active) { display: none; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <button class="lang-switch" onclick="toggleLang()" id="langBtn">ENGLISH</button>
-    </nav>
-
-    <div class="content">
-        <!-- 中文版内容 -->
-        <div id="zh-content" class="active" data-lang="zh">
-            <span class="badge">顶级域名资产出售</span>
-            <h1 class="domain-name">dflm.top</h1>
-            <p class="price-tag">报价：CNY 12,800</p>
-            <a href="mailto:zmkc404@://gmail.com：dflm.top" class="cta-button">立即咨询</a>
+    <!-- Header / Nav -->
+    <header class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
+        <div class="flex items-center space-x-2">
+            <span class="seal text-xl calligraphy">东方联盟</span>
+            <span class="text-sm font-light tracking-widest hidden md:block">DFLM.TOP</span>
         </div>
+        <nav class="space-x-6 text-sm tracking-tighter">
+            <a href="#value" class="hover:text-red-700 transition">VALUE</a>
+            <a href="#branding" class="hover:text-red-700 transition">BRANDING</a>
+            <a href="#contact" class="px-4 py-2 bg-black text-white rounded-full hover:bg-zinc-800 transition">BUY NOW</a>
+        </nav>
+    </header>
 
-        <!-- 英文版内容 -->
-        <div id="en-content" data-lang="en">
-            <span class="badge">Premium Domain For Sale</span>
-            <h1 class="domain-name">dflm.top</h1>
-            <p class="price-tag">OFFER: CNY 12,800</p>
-            <a href="mailto:zmkc404@://gmail.com: dflm.top" class="cta-button">Inquire Now</a>
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+        <img src="https://images.unsplash.com/photo-1762860497981-cbc87873d222?fm=jpg&q=80&w=2000" 
+             alt="Oriental Zen Mountains" 
+             class="absolute inset-0 w-full h-full object-cover opacity-60">
+        
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-7xl md:text-9xl font-bold tracking-tighter serif-en mb-4">dflm.top</h1>
+            <p class="text-lg md:text-2xl font-extralight tracking-[0.2em] uppercase calligraphy">东方智慧 · 现代康养 · 灵性连接</p>
+            <div class="mt-12">
+                <a href="#contact" class="border border-white/50 px-8 py-3 hover:bg-white hover:text-black transition duration-500 tracking-widest text-sm">
+                    INQUIRE NOW / 立即结缘
+                </a>
+            </div>
         </div>
-    </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14l-7 7-7-7m14-8l-7 7-7-7"></path></svg>
+        </div>
+    </section>
 
-    <footer>
-        Professional Transaction • Secure Transfer • 24/7 Support
+    <!-- Branding Interpretation -->
+    <section id="branding" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="scroll-reveal">
+                <h2 class="text-4xl serif-en mb-6">Semantic Versatility<br><span class="text-zinc-400 font-light">多维品牌释义</span></h2>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-bold border-l-2 border-red-700 pl-4 mb-2">DFLM = Dong Fang Lian Meng (东方联盟)</h3>
+                        <p class="text-zinc-600 leading-relaxed">The "Oriental Alliance" — a perfect hub for health conglomerates, cultural exchange platforms, or professional metaphysics guilds.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold border-l-2 border-red-700 pl-4 mb-2">DFLM = Digital Fengshui & Lifestyle Management</h3>
+                        <p class="text-zinc-600 leading-relaxed">Modernize traditional wisdom with a tech-forward name. Ideal for high-end consulting and lifestyle apps.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold border-l-2 border-red-700 pl-4 mb-2">DFLM = Dong Fang Ling Miao (东方灵庙)</h3>
+                        <p class="text-zinc-600 leading-relaxed">"Oriental Soul Sanctuary" — tailored for meditation retreats, high-end SPA理疗, and spiritual growth centers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-reveal">
+                <img src="https://images.unsplash.com/photo-1640341272496-bd2b46897386?fm=jpg&q=80&w=1000" 
+                     alt="Ink Wash Texture" 
+                     class="rounded-lg shadow-2xl grayscale">
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Table -->
+    <section id="value" class="bg-zinc-100 py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h2 class="text-3xl serif-en mb-4">Domain Valuation Metrics</h2>
+            <p class="text-zinc-500">Why dflm.top is a strategic asset for your business.</p>
+        </div>
+        <div class="max-w-4xl mx-auto bg-white shadow-xl overflow-hidden rounded-xl">
+            <table class="w-full text-left">
+                <thead class="bg-black text-white uppercase text-xs tracking-widest">
+                    <tr>
+                        <th class="p-6">Feature</th>
+                        <th class="p-6">Rating</th>
+                        <th class="p-6">Impact</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-zinc-200">
+                    <tr>
+                        <td class="p-6 font-semibold">Length (4 Characters)</td>
+                        <td class="p-6 text-green-600">★★★★★</td>
+                        <td class="p-6 text-sm">Extremely rare, easy to recall, and mobile-friendly.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-6 font-semibold">Extension (.top)</td>
+                        <td class="p-6 text-green-600">★★★★☆</td>
+                        <td class="p-6 text-sm">Global TLD with high recognition in tech and retail.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-6 font-semibold">Cultural Resonance</td>
+                        <td class="p-6 text-green-600">★★★★★</td>
+                        <td class="p-6 text-sm">Perfect phonetics for the billion-dollar wellness industry.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Scenarios -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="scroll-reveal relative group">
+                <img src="https://images.unsplash.com/photo-1747791652505-874315b4cfa9?fm=jpg&q=80&w=800" class="h-64 w-full object-cover rounded-lg">
+                <div class="mt-4">
+                    <h4 class="text-lg font-bold">Wellness Spa & TCM</h4>
+                    <p class="text-sm text-zinc-500">Premium branding for acupuncture clinics and retreats.</p>
+                </div>
+            </div>
+            <div class="scroll-reveal relative group delay-100">
+                <img src="https://images.unsplash.com/photos/a-garden-with-rocks-and-grass-in-the-middle-zaQqlBZZxpE?fm=jpg&q=80&w=800" class="h-64 w-full object-cover rounded-lg">
+                <div class="mt-4">
+                    <h4 class="text-lg font-bold">Metaphysics Consulting</h4>
+                    <p class="text-sm text-zinc-500">Authority for I-Ching and Feng Shui masters.</p>
+                </div>
+            </div>
+            <div class="scroll-reveal relative group delay-200">
+                <img src="https://images.unsplash.com/photo-1750515441508-cb81f8d42a0b?fm=jpg&q=80&w=800" class="h-64 w-full object-cover rounded-lg">
+                <div class="mt-4">
+                    <h4 class="text-lg font-bold">Cultural Heritage</h4>
+                    <p class="text-sm text-zinc-500">Exhibition and global cultural propagation hubs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Escrow -->
+    <section id="contact" class="bg-black text-white py-32 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-5xl serif-en mb-8 italic italic">Inherit the Legacy.</h2>
+                <p class="text-zinc-400 leading-loose mb-12">
+                    Owning <span class="text-white font-bold">dflm.top</span> is more than a digital acquisition; it's a strategic move to dominate the Oriental Wellness sector. Whether you are building an app or a luxury sanctuary, the right name is the first ritual.
+                </p>
+                <div class="flex space-x-8 opacity-50">
+                    <span class="text-xs tracking-widest uppercase">Escrow.com Secure</span>
+                    <span class="text-xs tracking-widest uppercase">Dan.com Verified</span>
+                    <span class="text-xs tracking-widest uppercase">Sedo Verified</span>
+                </div>
+            </div>
+            <div class="bg-zinc-900 p-8 rounded-2xl">
+                <form id="inquiryForm" class="space-y-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest mb-2 opacity-50">Full Name</label>
+                        <input type="text" class="w-full bg-transparent border-b border-white/20 py-2 focus:border-white outline-none transition" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest mb-2 opacity-50">Email Address</label>
+                        <input type="email" class="w-full bg-transparent border-b border-white/20 py-2 focus:border-white outline-none transition" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest mb-2 opacity-50">Offer Amount (USD)</label>
+                        <input type="number" placeholder="Optional" class="w-full bg-transparent border-b border-white/20 py-2 focus:border-white outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest mb-2 opacity-50">Intended Use</label>
+                        <textarea rows="3" class="w-full bg-transparent border-b border-white/20 py-2 focus:border-white outline-none transition"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-white text-black py-4 font-bold hover:bg-red-700 hover:text-white transition duration-500">
+                        SEND INQUIRY / 提交意向
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 text-center text-xs text-zinc-500 border-t border-zinc-200">
+        &copy; 2026 dflm.top Domain Sales Agency. All Rights Reserved. <br>
+        <span class="mt-2 block">Premium digital assets for the holistic world.</span>
     </footer>
 
     <script>
-        function toggleLang() {
-            const zh = document.getElementById('zh-content');
-            const en = document.getElementById('en-content');
-            const btn = document.getElementById('langBtn');
+        // Scroll Reveal Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
 
-            if (zh.classList.contains('active')) {
-                zh.classList.remove('active');
-                en.classList.add('active');
-                btn.innerText = "中文";
-            } else {
-                en.classList.remove('active');
-                zh.classList.add('active');
-                btn.innerText = "ENGLISH";
-            }
-        }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form Handling
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = "SENDING...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                alert("Thank you for your interest. Our brokerage team will contact you shortly regarding dflm.top.\n\n您的意向已收到，我们的团队将尽快与您联系。");
+                btn.innerText = originalText;
+                btn.disabled = false;
+                e.target.reset();
+            }, 1500);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
