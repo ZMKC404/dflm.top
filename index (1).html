@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFLM.TOP | Premium Domain</title>
+    <style>
+        :root {
+            --bg-color: #080808;
+            --text-main: #ffffff;
+            --text-dim: rgba(255, 255, 255, 0.5);
+            --gold: #c5a059;
+            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #080808 100%);
+        }
+
+        /* 顶部导航与语言切换 */
+        nav {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            z-index: 100;
+        }
+
+        .lang-switch {
+            background: none;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--text-dim);
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 12px;
+            letter-spacing: 2px;
+            transition: var(--transition);
+        }
+
+        .lang-switch:hover {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        /* 主体内容 */
+        .content {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s forwards ease-out;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .badge {
+            font-size: 11px;
+            letter-spacing: 5px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .domain-name {
+            font-size: clamp(3.5rem, 12vw, 8rem);
+            font-weight: 700;
+            letter-spacing: -3px;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+            /* 渐变质感 */
+            background: linear-gradient(to bottom, #fff 30%, #666 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .price-tag {
+            font-size: 1.2rem;
+            font-weight: 200;
+            color: var(--text-dim);
+            letter-spacing: 4px;
+            margin-bottom: 4rem;
+        }
+
+        /* 按钮 */
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            background: #fff;
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        /* 底部信息 */
+        footer {
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            text-align: center;
+            font-size: 10px;
+            color: rgba(255,255,255,0.2);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* 隐藏未选中的语言 */
+        [data-lang]:not(.active) { display: none; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <button class="lang-switch" onclick="toggleLang()" id="langBtn">ENGLISH</button>
+    </nav>
+
+    <div class="content">
+        <!-- 中文版内容 -->
+        <div id="zh-content" class="active" data-lang="zh">
+            <span class="badge">顶级域名资产出售</span>
+            <h1 class="domain-name">dflm.top</h1>
+            <p class="price-tag">报价：CNY 12,800</p>
+            <a href="mailto:zmkc404@://gmail.com：dflm.top" class="cta-button">立即咨询</a>
+        </div>
+
+        <!-- 英文版内容 -->
+        <div id="en-content" data-lang="en">
+            <span class="badge">Premium Domain For Sale</span>
+            <h1 class="domain-name">dflm.top</h1>
+            <p class="price-tag">OFFER: CNY 12,800</p>
+            <a href="mailto:zmkc404@://gmail.com: dflm.top" class="cta-button">Inquire Now</a>
+        </div>
+    </div>
+
+    <footer>
+        Professional Transaction • Secure Transfer • 24/7 Support
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const zh = document.getElementById('zh-content');
+            const en = document.getElementById('en-content');
+            const btn = document.getElementById('langBtn');
+
+            if (zh.classList.contains('active')) {
+                zh.classList.remove('active');
+                en.classList.add('active');
+                btn.innerText = "中文";
+            } else {
+                en.classList.remove('active');
+                zh.classList.add('active');
+                btn.innerText = "ENGLISH";
+            }
+        }
+    </script>
+</body>
+</html>
